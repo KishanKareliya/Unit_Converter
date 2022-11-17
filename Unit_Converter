@@ -1,0 +1,401 @@
+#include<stdio.h>
+
+int main()
+{
+    char input;
+    
+    int tempChoice,userinput,currencyChoice,massChoice,LengthChoice,TimeChoice,SpeedChoice,StorageChoice,userinputUSDtoEuro,userinputUSDtoJPY,userinputUSDtoRMB,userinputRuppes,userinputDollar,userinputPound,userinputEuro,userinputOunce,userinputGram,userinputkiloGram,userinputTonne,fahrenheitToCelcius,celciusToFahrenheit,userinputKmtoM,userinputMtoKm,userinputFootToInch,userinputInchToFoot,userinputCmToM,userinputCmToMm,userinputMmToCm,userinputHour,userinputMinutes,userinputDay,userinputWeek,userinputSpeed,userinputKb,userinputMb,userinputGb,userinputTb;
+    
+    float USDtoEURO,RupeesToDollar,DollarToRupees,PoundToRupees,EuroToRupees,USDtoJPY,USDtoRMB,ounceToPounds,gramsToPounds,kiloGramsToGram,GramsToKiloGram,GramsToMiliGram,KgToTonne,TonneToKg,KmToM,MtoKm,FootToInch,InchToFoot,CmToM,CmToMm,MmToCm,HourToMinutes,MinutesToSeconds,DayToWeek,WeekToMonth, KmhToMps,MpsToKmh,KbToMb,MbToGb,GbToTb,KbToGb,MbToKb,GbToMb,GbToKb,TbToGb;
+    
+    
+    
+        printf("Welcome to Unit Converter! \n");
+    while(1)
+    {
+         printf("\nHere is a list of conversation to choose from: \n");
+        printf(" \n\n1. Temperature(T),\n2. Currency(C),\n3. Mass(M),\n4. Length(L),\n5. Time(T)\n6. Speed\n7. Digital storage\n");
+        scanf("%c",&input);
+        
+        switch(input)
+        {
+            case'q':
+            printf("quiting the program");
+            goto end;
+            break;
+            
+            case'1':
+             printf("Welcome to Temperature Converter! \n");
+            printf("Here is a list of conversations to choose from: \n");
+         
+             printf("1. Fahrenheit to Celsius. \n2. Celsius to Fahrenheit. \n");
+         
+          scanf("%d",&tempChoice);
+             switch(tempChoice)
+                {
+                 case 1:
+                 printf("Please enter the Fahrenheit degree: \n");
+                 scanf("%d",&userinput);
+                 fahrenheitToCelcius =  ((userinput-32) * (5.0/9.0));
+                 printf("Celcius: %d",fahrenheitToCelcius); 
+                 break;
+          
+                 case 2:
+                 printf("Please enter the Celcius degree: \n");
+                 scanf("%d",&userinput);
+                 celciusToFahrenheit = ((9.0/5.0)*userinput + 32);
+                 printf("Fahrenheit: %d",celciusToFahrenheit);
+                 break;
+                 
+                 default:
+                 break;
+                }
+                break;
+             
+             
+             case '2':
+              printf("Welcome to Currency Converter! \n");
+              printf("Here is a list of conversations to choose from: \n");
+              printf(" 1. USD to Euro. \n 2. USD to JPY. \n3. USD to RMB. \n 4. Rupees to Dollar.\n 5. Dollar to Rupees.\n 6. Pound to Rupees.\n 7. Euro to Rupees.\n");
+              scanf("%d",&currencyChoice);
+             
+            
+            switch(currencyChoice)
+            {
+                case 1:
+                 printf("Please enter the USD amount: \n");
+                 scanf("%d",&userinputUSDtoEuro);
+                 USDtoEURO = userinputUSDtoEuro * 0.87;
+                 printf("Euro: %.2f",USDtoEURO);
+                 break;
+                 
+                 case 2:
+                  printf("Please enter the USD amount: \n");
+                  scanf("%d",&userinputUSDtoJPY);
+                  USDtoJPY = userinputUSDtoJPY * 111.09;
+                  printf("JPY: %.2f",USDtoJPY);
+                  break;
+                  
+                  case 3:
+                  printf("Please enter the USD amount: \n");
+                  scanf("%d",&userinputUSDtoRMB);
+                  USDtoRMB = userinputUSDtoRMB * 6.82;
+                  printf("RMB: %.2f",USDtoRMB);
+                  break;
+                  
+                  case 4:
+                  printf("Please enter the Rupees amount: \n");
+	              scanf("%d",&userinputRuppes);
+	              RupeesToDollar = userinputRuppes * 0.01241;
+	              printf("Dollar: %.2f",RupeesToDollar);
+	              break;
+	
+	             case 5:
+	             printf("Please enter the Dollar amount: \n");
+            	scanf("%d",&userinputDollar);
+            	DollarToRupees = userinputDollar * 80.4865;
+            	printf("Rupees: %.2f",DollarToRupees);
+            	break;
+	
+	             case 6:
+	             printf("Please enter the Pound amount: \n");
+	            scanf("%d",&userinputPound);
+	            PoundToRupees = userinputPound * 95.1448;
+	            printf("Rupees: %.2f",PoundToRupees);
+	            break;
+	
+	             case 7:
+	             printf("Please enter the Euro amount: \n");
+	            scanf("%d",&userinputEuro);
+            	EuroToRupees = userinputEuro * 83.3036;
+            	printf("Rupees: %.2f",EuroToRupees);
+            	break;
+	
+            
+                  default:
+                  break;
+        
+          
+            }
+            break;
+            
+            
+            case '3':
+            printf("Welcome to Mass Converter! \n");
+            printf("Here is a list of conversations to choose from: \n");
+            printf("1. ounces to pounds. \n 2. gram to pounds. \n3. kilo gram to gram. \n4. gram to kilo gram. \n5. gram to Mili gram. \n6. kilo gram to Tonne. \n7. Tonne to kilo gram. \n");
+            scanf("%d",&massChoice);
+            
+            switch(massChoice)
+            {
+                case 1:
+                 printf("Please enter the ounce amount: \n");
+	             scanf("%d",&userinputOunce);
+	             ounceToPounds = userinputOunce * 0.0625;
+	             printf("Pounds: %.2f",ounceToPounds);
+	             break;
+	  
+	            case 2:
+	            printf("Please enter the gram amount: \n");
+	            scanf("%d",&userinputGram);
+	            gramsToPounds = userinputGram * 0.00220462;
+	            printf("Pounds: %.2f",gramsToPounds);
+	            break;
+	  
+	            case 3:
+	            printf("Please enter the kilo gram amount: \n");
+	            scanf("%d",&userinputkiloGram);
+	            kiloGramsToGram = userinputkiloGram * 1000;
+	            printf("Gram: %.2f",kiloGramsToGram);
+	            break;
+	  
+	            case 4:
+	            printf("Please enter the  gram amount: \n");
+	            scanf("%d",&userinputGram);
+	            GramsToKiloGram = userinputGram * 0.001;
+	            printf("Kilo Gram: %.2f",GramsToKiloGram);
+	            break;
+	  
+	          case 5:
+	          printf("Please enter the  gram amount: \n");
+	          scanf("%d",&userinputGram);
+	          GramsToMiliGram = userinputGram * 1000;
+	          printf("Mili Gram: %.2f",GramsToMiliGram);
+	          break;
+	  
+	        case 6:
+	        printf("Please enter the  Kilo gram: \n");
+	        scanf("%d",&userinputkiloGram);
+      	    KgToTonne = userinputkiloGram * 0.001;
+	        printf("Tonne: %.2f",KgToTonne);
+	        break;
+	  
+	        case 7:
+	        printf("Please enter the Tonne: \n");
+	        scanf("%d",&userinputTonne);
+	        TonneToKg = userinputTonne * 1000;
+	        printf("Kilo Gram: %.2f",TonneToKg);
+	        break;
+	        
+	        default:
+            break;
+	       }
+            break;
+            
+            
+            case '4':
+            printf("Welcome to Length Converter! \n");
+            printf("Here is a list of conversations to choose from: \n");
+            printf("1. KiloMeter to Meter. \n2. Meter to KiloMeter. \n3. Foot to Inch. \n4. Inch to Foot. \n5. CentiMeter to Meter. \n6. CentiMeter to MiliMeter. \n7. MiliMeter to CentiMeter. \n");
+            scanf("%d",&LengthChoice);
+            
+            switch(LengthChoice)
+            {
+                case 1:
+                 printf("Please enter the KiloMeter : \n");
+	            scanf("%d",&userinputKmtoM);
+	            KmToM = userinputKmtoM * 1000;
+	            printf("Meter: %.2f",KmToM); 
+                break;
+                
+                
+                case 2:
+                printf("Please enter the Meter amount: \n");
+	            scanf("%d",&userinputMtoKm);
+	            MtoKm = userinputMtoKm * 0.001;
+	            printf("KiloMeter: %.2f",MtoKm);
+                break;
+                
+                
+                case 3:
+                printf("Please enter the Foot amount: \n");
+	            scanf("%d",&userinputFootToInch);
+	            FootToInch = userinputFootToInch * 12;
+	            printf("Inch: %.2f",FootToInch);
+                break;
+                
+                
+                case 4:
+                printf("Please enter the Inch amount: \n");
+	            scanf("%d",&userinputInchToFoot);
+	            InchToFoot = userinputInchToFoot * 0.083333;
+	            printf("Foot: %.2f",InchToFoot);
+                break;
+                
+                
+                case 5:
+                printf("Please enter the Centimeter amount: \n");
+	            scanf("%d",&userinputCmToM);
+	            CmToM = userinputCmToM /100;
+	            printf("Meter: %.2f",CmToM);
+                break;
+                
+                
+                case 6:
+                printf("Please enter the Centimeter amount: \n");
+	            scanf("%d",&userinputCmToMm);
+	            CmToMm = userinputCmToMm *10;
+	            printf("Milimeter: %.2f",CmToMm);
+                break;
+                
+                
+                case 7:
+                printf("Please enter the Milimeter amount: \n");
+	            scanf("%d",&userinputMmToCm);
+	            MmToCm = userinputMmToCm /10;
+            	printf("Centimeter: %.2f",MmToCm);
+                break;
+                
+                
+                default:
+                break;
+                
+            }
+            break;
+            
+            case '5':
+            printf("Welcome to Time Converter! \n");
+            printf("Here is a list of conversations to choose from: \n");
+            printf("1. Hour to Minutes. \n2. Minutes to Seconds. \n 3. Day to Week. \n4. Week to Month. \n");
+            scanf("%d",&TimeChoice);
+         
+            switch(TimeChoice)
+            {
+                case 1:
+                printf("Please enter the Hour: \n");
+	            scanf("%d",&userinputHour);
+	            HourToMinutes = userinputHour * 60;
+	            printf("Minutes: %.2f",HourToMinutes);
+                break;
+             
+             case 2:
+             printf("Please enter the Minutes: \n");
+	         scanf("%d",&userinputMinutes);
+	         MinutesToSeconds = userinputMinutes * 60;
+	         printf("Seconds: %.2f",MinutesToSeconds);
+             break;
+             
+             case 3:
+             printf("Please enter the Day: \n");
+	         scanf("%d",&userinputDay);
+	         DayToWeek = userinputDay * 0.142857;
+	         printf("Week: %.2f",DayToWeek);
+             break;
+             
+             case 4:
+             printf("Please enter the  Week: \n");
+	         scanf("%d",&userinputWeek);
+	         WeekToMonth = userinputWeek * 0.230137;
+	         printf("Month: %.2f",WeekToMonth);
+             break;
+             
+             default:
+             break;
+             
+             
+            }
+            break;
+            
+            case '6':
+            printf("Welcome to Speed Converter! \n");
+            printf("Here is a list of conversations to choose from: \n");
+            printf("1. Kilometer per hour to Meter per secound. \n2. Meter per secound to Kilometer per hour. \n");
+            scanf("%d",&SpeedChoice);
+            
+            switch(SpeedChoice)
+            {
+                case 1:
+                printf("Please enter the Kilometer per hour Speed: \n");
+	            scanf("%d",&userinputSpeed);
+	            KmhToMps = userinputSpeed * 0.277778;
+	            printf("Meter per secound: %.2f",KmhToMps);
+                break;
+                
+                case 2:
+                printf("Please enter the Meter per secound Speed: \n");
+	            scanf("%d",&userinputSpeed);
+	            MpsToKmh = userinputSpeed * 0.277778;
+	            printf("Kilometer per hour: %.2f",MpsToKmh);
+                break;
+                
+                default:
+                break;
+            }
+            break;
+            
+            case '7':
+            printf("Welcome to Digital storage! \n");
+            printf("Here is a list of conversations to choose from: \n");
+            printf("1. Kb to Mb. \n2. Mb to Gb. \n3. Gb to Tb. \n4. Kb to Gb. \n5. Mb to Kb. \n6. Gb to Mb. \n7. Gb to Kb. \n8. Tb to Gb. \n");
+            scanf("%d",&StorageChoice);
+            
+            switch(StorageChoice)
+            {
+                case 1:
+                printf("Please enter the Kb: \n");
+	            scanf("%d",&userinputKb);
+	            KbToMb = userinputKb * 0.001;
+	            printf("Mb: %.2f",KbToMb);
+                break;
+                
+                case 2:
+                printf("Please enter the Mb: \n");
+	            scanf("%d",&userinputMb);
+	            MbToGb = userinputMb * 0.001;
+	            printf("Gb: %.2f",MbToGb);
+                break;
+                
+                case 3:
+                printf("Please enter the Gb: \n");
+	            scanf("%d",&userinputGb);
+	            GbToTb = userinputGb * 0.001;
+	            printf("Tb: %.2f",GbToTb);
+                break;
+                
+                case 4:
+                 printf("Please enter the Kb: \n");
+	             scanf("%d",&userinputKb);
+	             KbToGb = userinputKb * 0.0000010;
+	             printf("Gb: %.2f",KbToGb);
+                 break;
+                
+                case 5:
+                printf("Please enter the Mb: \n");
+	            scanf("%d",&userinputMb);
+	            MbToKb = userinputMb * 1000;
+	            printf("Kb: %.2f",MbToKb);
+                break;
+                
+                case 6:
+                printf("Please enter the Gb: \n");
+	            scanf("%d",&userinputGb);
+	            GbToMb = userinputGb * 1000;
+	            printf("Mb: %.2f",GbToMb);
+                break;
+                
+                case 7:
+                printf("Please enter the Gb: \n");
+	            scanf("%d",&userinputGb);
+	            GbToKb = userinputGb * 1000000;
+	            printf("Kb: %.2f",GbToKb);
+                break;
+                
+                case 8:
+                printf("Please enter the Tb: \n");
+	            scanf("%d",&userinputTb);
+	            TbToGb = userinputTb * 1000;
+	            printf("Gb: %.2f",TbToGb);
+                break;
+                
+                default:
+                break;
+            }
+            break;
+           
+            default:
+            break;
+        }
+    }
+    end:
+    return 0;
+}
